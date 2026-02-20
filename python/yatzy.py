@@ -228,3 +228,13 @@ class Yatzy:
             return _2_at * 2 + _3_at * 3
         else:
             return 0
+    
+    @staticmethod
+    def crazy_chance(d1, d2, d3, d4, d5):
+        total = 0
+        for d in [d1, d2, d3, d4, d5]:
+            if d % 2 == 0:
+                total += d * 3
+            else:
+                total += d * 2
+        return total

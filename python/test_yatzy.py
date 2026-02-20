@@ -120,3 +120,17 @@ def test_full_house_other_combination():
 
 def test_full_house_not_valid_returns_0():
     assert Yatzy.fullHouse(2, 2, 2, 2, 5) == 0
+
+# CrazyChance
+
+def test_crazy_chance_all_even():
+    # 2,4,6,2,2 = 48
+    assert Yatzy.crazy_chance(2, 4, 6, 2, 2) == 48
+
+def test_crazy_chance_all_odd():
+    # 1,1,3,5,5 = 30
+    assert Yatzy.crazy_chance(1, 1, 3, 5, 5) == 30
+
+def test_crazy_chance_mixed_even_and_odd():
+    # 2,4,3,5,6 = 52
+    assert Yatzy.crazy_chance(2, 4, 3, 5, 6) == 52
